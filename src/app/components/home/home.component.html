@@ -1,0 +1,4 @@
+
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+<app-errors *ngIf="hasAnError" [messajeInput]="messageError" class="m-5"></app-errors>
+<app-gallery [songsInput]="spotifyNewRelases"></app-gallery>

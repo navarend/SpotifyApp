@@ -1,0 +1,12 @@
+
+  <div class="card-columns">
+  <div (click)="GetDetails(song)" class="card puntero" *ngFor="let song of songs">
+    <img class="card-img-top" [src]="song.images | noImage" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ song.name }}</h5>
+      <p class="card-text">
+        <span *ngFor="let artist of song.artists" class="badge badge-pill badge-primary">{{ artist.name }}</span>
+      </p>
+    </div>
+  </div>
+  </div>

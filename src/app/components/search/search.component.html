@@ -1,0 +1,9 @@
+
+<div class="row m-5">
+  <div class="col">
+    <input type="search" class="form-control" placeholder="Find an artist" name="artistToSearch" [(ngModel)]="artistToSearch" (keyup)="FindArtist()">
+  </div>
+</div>
+
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+<app-gallery *ngIf="!loading" [songsInput]="artistFound"></app-gallery>
